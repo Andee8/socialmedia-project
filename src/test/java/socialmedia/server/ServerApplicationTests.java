@@ -1,4 +1,4 @@
-package edu.utcn.timetracking.server;
+package socialmedia.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

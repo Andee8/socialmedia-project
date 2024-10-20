@@ -37,7 +37,7 @@ A distributed social media/blogging application
   <summary style="font-size: 1.25em;"><b>Tools</b></summary>
 Install following tools:
 
-- [Git](https://git-scm.com/downloads/win), [setup credentials locally](https://www.geeksforgeeks.org/how-to-set-git-username-and-password-in-gitbash/)
+- [Git client](https://git-scm.com/downloads/win), [setup credentials locally](https://www.geeksforgeeks.org/how-to-set-git-username-and-password-in-gitbash/)
 - [jdk](https://www.oracle.com/java/technologies/downloads), [mvn](https://maven.apache.org/download.cgi), [Intellij community edition](https://www.jetbrains.com/idea/download)
 - [Postman](https://www.postman.com/downloads/)
 - [Mysql installer](https://dev.mysql.com/downloads/installer/): install Mysql workbench, Mysql server, jdbc(JConnector)
@@ -48,6 +48,11 @@ Check installation in cmd:
 - `git --version`
 - `java --version`
 - `mvn --version`
+
+Other tools and libraries:
+- spring project initializer: https://start.spring.io/
+- [lombok](https://www.baeldung.com/intro-to-project-lombok)
+- optional: [Docker](https://spring.io/guides/gs/spring-boot-docker)
 </details>
 
 ### Project requirements
