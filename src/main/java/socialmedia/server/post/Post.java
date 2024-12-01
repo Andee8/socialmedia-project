@@ -1,12 +1,12 @@
 package socialmedia.server.post;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import socialmedia.server.user.User;
 
-import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -17,7 +17,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private String title;
 

@@ -54,6 +54,25 @@ Other tools and libraries:
 - [lombok](https://www.baeldung.com/intro-to-project-lombok)
 - optional: [Docker](https://spring.io/guides/gs/spring-boot-docker)
 </details>
+<br>
+<details>
+  <summary style="font-size: 1.25em;"><b>Frontend setup: vue+vuetify</b></summary>
+
+1. check - backend ready
+2. create `config/WebConfig.java` with given contents
+3. in cmd: `npm install -g @vue/cli`
+4. in cmd: `vue create socialmedia-frontend` -> select vue3, yarn (or npm)
+5. in cmd: `cd socialmedia-frontend` ; `yarn add axios` (or `npm init -y` ; `npm install axios`)
+6. in cmd: `vue add vuetify`, select vuetify-3 (vue-cli)
+7. add a *.vue component
+8. import it in app.vue
+9. add `{"vue/multi-word-component-names": "off"}` to `eslintConfig.rules` in `package.json`
+10. run backend, then in cmd: `yarn run serve` (or `npm run serve`)
+
+Check the <a href="https://vuetifyjs.com/en/components/explorer/">Vue components documentation</a>!
+</details>
+<br>
+
 
 ### Project requirements
 - Database:
