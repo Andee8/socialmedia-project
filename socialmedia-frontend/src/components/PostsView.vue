@@ -31,7 +31,7 @@ export default {
   methods: {
     async fetchPosts() {
       try {
-        const response = await axios.get('http://localhost:8082/post');
+        const response = await axios.get('http://localhost:8080/post');
         this.posts = response.data;
       } catch (error) {
         console.error("Error fetching posts:", error);

@@ -1,17 +1,22 @@
 <template>
   <v-app>
     <v-main>
-      <!--      <HelloWorld/>-->
-      <div style="max-width: 1000px;margin-left: 200px">
-        <posts-view/>
-        <v-btn style="align-content: center" @click="openDialog">
-          Create new post
-        </v-btn>
-      </div>
-      <add-post
+      <div style="max-width: 1000px; margin-left: 200px">
+        <button @click="openAddPostDialog">Add Post</button>
+        <button @click="currentView = 'PendingPosts'">Pending Posts</button>
+        <button @click="currentView = 'PostsView'">View Posts</button>
+        <button @click="currentView = 'ManagePosts'">Manage Posts</button>
+
+   
+        <component :is="currentView" :currentUser="username"></component>
+
+        
+        <add-post
           :currentUser="username"
-          ref="addPostDialog"
-      ></add-post>
+          :showDialog="showAddPostDialog"
+          @updateDialog="showAddPostDialog = $event"
+        ></add-post>
+      </div>
     </v-main>
   </v-app>
 </template>
@@ -19,24 +24,28 @@
 <script>
 import PostsView from "@/components/PostsView.vue";
 import AddPost from "@/components/AddPost.vue";
+import PendingPosts from "@/components/PendingPosts.vue";
+import ManagePosts from "@/components/ManagePosts.vue";
 
 export default {
-  name: 'App',
-
+  name: "App",
   components: {
     PostsView,
-    AddPost
+    AddPost,
+    PendingPosts,
+    ManagePosts,
   },
-
-  data: () => ({
-    username: "Nume utilizator"
-  }),
+  data() {
+    return {
+      username: "Nume utilizator",
+      currentView: "PostsView",
+      showAddPostDialog: false, 
+    };
+  },
   methods: {
-    openDialog() {
-      this.$refs.addPostDialog.showDialog = true
-    }
-  }
-
-
-}
+    openAddPostDialog() {
+      this.showAddPostDialog = true;
+    },
+  },
+};
 </script>

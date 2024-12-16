@@ -1,6 +1,14 @@
 package socialmedia.server.post;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+@Repository
 public interface PostRepository extends JpaRepository<Post, Integer> {
+    @Query("SELECT p FROM Post p WHERE p.status = :status AND p.user.id = :userId")
+    List<Post> findAllPublishedPostsByUser(@Param("userId") int userId, @Param("status") Status status);
+    List<Post> findByTitleAndUserName(String title, String userName);
+    List<Post> findByTitleAndUserId(String title, int userId);
 }

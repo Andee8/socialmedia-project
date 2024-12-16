@@ -32,4 +32,12 @@ public class Post {
     @ManyToOne
     @JoinColumn(name="user_id", nullable = true)
     private User user;
+
+    // Constructor without ID for creating new Posts
+    public Post(String title, String content, Status status) {
+        this.title = title;
+        this.content = content;
+        this.status = status;
+    }
+
 }

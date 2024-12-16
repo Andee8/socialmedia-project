@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "app_user") // Schimb numele tabelului
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
